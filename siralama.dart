@@ -1,15 +1,15 @@
 import 'dart:io';
 
 void main() {
-  List list = [];
+  List<int> list = [];
 
   while (list.length < 10) {
     stdout.write('${list.length + 1} . elemanı giriniz: ');
     var girdi = stdin.readLineSync()!;
 
     try {
-      double.parse(girdi);
-      list.add(girdi);
+      var sayi = int.parse(girdi);
+      list.add(sayi);
     } on Exception {
       print("\nLütfen geçerli bir sayı giriniz.");
     }
